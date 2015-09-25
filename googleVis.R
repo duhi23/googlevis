@@ -7,6 +7,12 @@ head(CityPopularity)
 Pie <- gvisPieChart(CityPopularity, options = list(width = 400, height = 200))
 plot(Pie)
 
+## Estado Civil - Ecuador
+estcivil <- data.frame(Estado=c('Soltero', 'Casado', 'Unido', 'Separado', 'Viudo', 'Divorciado'),
+                       Casos=c(3960653, 3521424, 2214067, 526860, 413296, 203393))
+pastel <- gvisPieChart(estcivil, options = list(width = 500, height = 300))
+pastel
+
 # Ejemplo 2
 head(Exports)
 Geo <- gvisGeoChart(Exports, locationvar = "Country", colorvar = "Profit", options = list(height = 300, 
